@@ -1,123 +1,114 @@
-.cases-list {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
+.cases-list { display: flex; flex-direction: column; gap: 1.5rem; }
 
 .case-card {
-  background: var(--bg-2);
+  background: var(--white);
   border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 2rem;
-  transition: border-color 0.25s;
+  box-shadow: var(--shadow-card);
 }
-
-.case-card:hover { border-color: rgba(0,255,160,0.22); }
 
 .case-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.75rem;
   flex-wrap: wrap;
   gap: 0.5rem;
 }
 
 .case-date {
-  font-family: var(--mono);
-  font-size: 0.7rem;
-  color: var(--accent);
-  letter-spacing: 0.1em;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--notion-blue);
+  letter-spacing: 0.125px;
 }
 
-.case-tags { display: flex; gap: 0.5rem; }
+.case-tags { display: flex; gap: 0.4rem; }
 
 .case-title {
   font-size: 1.15rem;
-  font-weight: 800;
-  color: var(--text-bright);
-  margin-bottom: 0.75rem;
-  letter-spacing: -0.01em;
+  font-weight: 700;
+  color: var(--near-black);
+  margin-bottom: 0.65rem;
+  letter-spacing: -0.25px;
 }
 
 .case-summary {
   font-size: 0.92rem;
-  color: var(--text);
-  line-height: 1.75;
-  margin-bottom: 2rem;
-  max-width: 700px;
+  font-weight: 400;
+  color: var(--gray-500);
+  line-height: 1.7;
+  margin-bottom: 1.8rem;
+  max-width: 680px;
 }
 
 .case-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2.5rem;
+  gap: 2rem;
 }
 
 .case-block h4 {
-  font-family: var(--mono);
-  font-size: 0.66rem;
-  color: var(--accent);
-  letter-spacing: 0.16em;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--notion-blue);
+  letter-spacing: 0.125px;
   text-transform: uppercase;
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.65rem;
   margin-top: 1.2rem;
 }
 
 .case-block h4:first-child { margin-top: 0; }
 
 .attack-chain {
-  padding-left: 1.3rem;
+  padding-left: 1.2rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.4rem;
 }
 
 .attack-chain li {
   font-size: 0.88rem;
-  color: var(--text);
-  line-height: 1.65;
-  padding-left: 0.3rem;
+  font-weight: 400;
+  color: var(--gray-500);
+  line-height: 1.6;
 }
 
-.attack-chain li::marker {
-  color: var(--accent);
-  font-family: var(--mono);
-  font-size: 0.75rem;
-}
+.attack-chain li::marker { color: var(--notion-blue); }
 
 .case-impact {
   font-size: 0.88rem;
-  color: var(--text);
-  line-height: 1.65;
+  color: var(--gray-500);
+  line-height: 1.6;
 }
 
 .root-cause {
-  background: rgba(255,77,109,0.07);
-  border-left: 2px solid var(--red);
-  padding: 0.7rem 1rem;
+  background: #fff0f2;
+  border-left: 2px solid #c0003c;
+  padding: 0.65rem 0.9rem;
   border-radius: 0 4px 4px 0;
   font-size: 0.87rem;
-  color: var(--text);
-  line-height: 1.65;
+  color: var(--gray-500);
+  line-height: 1.6;
 }
 
 .defense-lessons {
-  padding-left: 1.2rem;
+  padding-left: 1.1rem;
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
+  gap: 0.3rem;
 }
 
 .defense-lessons li {
   font-size: 0.87rem;
-  color: var(--text);
-  line-height: 1.65;
+  color: var(--gray-500);
+  line-height: 1.6;
 }
 
-.defense-lessons li::marker { color: var(--accent); }
+.defense-lessons li::marker { color: var(--teal); }
 
 @media (max-width: 768px) {
   .case-grid { grid-template-columns: 1fr; gap: 1.5rem; }
-  .case-card { padding: 1.4rem; }
+  .case-card { padding: 1.3rem; }
 }

@@ -2,12 +2,15 @@
   text-align: center;
   padding: 2.5rem;
   border-top: 1px solid var(--border);
-  font-family: var(--mono);
-  font-size: 0.68rem;
-  color: var(--text-dim);
-  letter-spacing: 0.08em;
-  position: relative;
-  z-index: 1;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--gray-300);
+  background: var(--warm-white);
 }
 
-.site-footer span { color: var(--accent); }
+.site-footer span {
+  font-family: var(--mono);
+  font-weight: 700;
+  color: var(--gray-500);
+  font-size: 12px;
+}
