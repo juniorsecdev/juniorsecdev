@@ -29,6 +29,14 @@ export const cyberDefenseAnalyst = {
       number: '01',
       title: 'The Cybersecurity Landscape',
       description: 'Start your journey to becoming a SOC Analyst. Learn core cybersecurity concepts that defend organizations against modern threats.',
+      status: 'complete',
+      lessons: [],
+    },
+    {
+      id: 'understanding-threats-attacks',
+      number: '02',
+      title: 'Understanding Threats and Attacks',
+      description: 'Learn to think like an attacker and defend like a pro. Master cyber threats, tactics, and industry-standard security frameworks.',
       status: 'in-progress',
       lessons: [
         {
@@ -113,14 +121,6 @@ export const cyberDefenseAnalyst = {
           ],
         },
       ],
-    },
-    {
-      id: 'understanding-threats-attacks',
-      number: '02',
-      title: 'Understanding Threats and Attacks',
-      description: 'Learn to think like an attacker and defend like a pro. Master cyber threats, tactics, and industry-standard security frameworks.',
-      status: 'upcoming',
-      lessons: [],
     },
     {
       id: 'security-operations-defense-analyst',
