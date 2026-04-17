@@ -1,0 +1,70 @@
+.search-wrap {
+  position: relative;
+  max-width: 420px;
+  margin-bottom: 2.5rem;
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-dim);
+  font-size: 1.1rem;
+  pointer-events: none;
+}
+
+.search-input {
+  width: 100%;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.75rem 1rem 0.75rem 2.6rem;
+  color: var(--text-bright);
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.search-input::placeholder { color: var(--text-dim); }
+.search-input:focus { border-color: rgba(0,255,160,0.35); }
+
+.concepts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 1rem;
+}
+
+.concept-card {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.2rem 1.4rem;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.concept-card:hover {
+  border-color: rgba(0,255,160,0.25);
+  transform: translateY(-2px);
+}
+
+.concept-term {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.04em;
+}
+
+.concept-def {
+  font-size: 0.87rem;
+  color: var(--text);
+  line-height: 1.65;
+}
+
+.no-results {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  grid-column: 1 / -1;
+}

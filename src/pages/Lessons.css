@@ -1,0 +1,36 @@
+.course-section { margin-bottom: 3rem; }
+
+.course-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.course-name {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.course-badge {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  padding: 0.18rem 0.5rem;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.status-in-progress { background: rgba(0,255,160,0.1); color: var(--accent); }
+.status-complete    { background: rgba(0,194,224,0.1); color: var(--blue); }
+
+.lessons-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}

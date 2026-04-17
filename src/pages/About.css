@@ -1,0 +1,114 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.about-text p {
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.85;
+  margin-bottom: 1.1rem;
+}
+
+.about-note {
+  margin-top: 1.8rem;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.1rem 1.3rem;
+  font-size: 0.88rem;
+  color: var(--text-dim);
+  line-height: 1.7;
+}
+
+.about-note-label {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  color: var(--accent);
+  letter-spacing: 0.12em;
+  margin-bottom: 0.4rem;
+}
+
+.cert-section-label {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  color: var(--text-dim);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.cert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.cert-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 1.1rem;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  gap: 1rem;
+}
+
+.cert-upcoming { opacity: 0.5; }
+
+.cert-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.cert-name {
+  font-weight: 700;
+  color: var(--text-bright);
+  font-size: 0.88rem;
+}
+
+.cert-lessons {
+  font-family: var(--mono);
+  font-size: 0.63rem;
+  color: var(--text-dim);
+}
+
+.cert-status {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  padding: 0.18rem 0.55rem;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+
+.status-in-progress { background: rgba(0,255,160,0.1); color: var(--accent); }
+.status-complete    { background: rgba(0,194,224,0.1); color: var(--blue); }
+.status-upcoming    { background: rgba(255,209,102,0.08); color: var(--yellow); }
+
+.focus-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.focus-tag {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  padding: 0.3rem 0.75rem;
+  background: var(--bg-3);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  color: var(--text-dim);
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 768px) {
+  .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+}

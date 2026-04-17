@@ -1,0 +1,123 @@
+.cases-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.case-card {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 2rem;
+  transition: border-color 0.25s;
+}
+
+.case-card:hover { border-color: rgba(0,255,160,0.22); }
+
+.case-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.case-date {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+}
+
+.case-tags { display: flex; gap: 0.5rem; }
+
+.case-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-bright);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+.case-summary {
+  font-size: 0.92rem;
+  color: var(--text);
+  line-height: 1.75;
+  margin-bottom: 2rem;
+  max-width: 700px;
+}
+
+.case-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.case-block h4 {
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  color: var(--accent);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 0.7rem;
+  margin-top: 1.2rem;
+}
+
+.case-block h4:first-child { margin-top: 0; }
+
+.attack-chain {
+  padding-left: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.attack-chain li {
+  font-size: 0.88rem;
+  color: var(--text);
+  line-height: 1.65;
+  padding-left: 0.3rem;
+}
+
+.attack-chain li::marker {
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 0.75rem;
+}
+
+.case-impact {
+  font-size: 0.88rem;
+  color: var(--text);
+  line-height: 1.65;
+}
+
+.root-cause {
+  background: rgba(255,77,109,0.07);
+  border-left: 2px solid var(--red);
+  padding: 0.7rem 1rem;
+  border-radius: 0 4px 4px 0;
+  font-size: 0.87rem;
+  color: var(--text);
+  line-height: 1.65;
+}
+
+.defense-lessons {
+  padding-left: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.defense-lessons li {
+  font-size: 0.87rem;
+  color: var(--text);
+  line-height: 1.65;
+}
+
+.defense-lessons li::marker { color: var(--accent); }
+
+@media (max-width: 768px) {
+  .case-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .case-card { padding: 1.4rem; }
+}
