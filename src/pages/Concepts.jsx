@@ -13,10 +13,11 @@ export default function Concepts() {
 
   return (
     <div className="page">
-      <div className="section-label">Quick Reference</div>
-      <h2>Core Concepts Glossary</h2>
+      <div className="section-label">My Definitions</div>
+      <h2>Concepts & Terminology</h2>
       <p className="page-desc">
-        Every important term covered so far. Fast-access definitions for review and exam prep.
+        Every term I have had to look up or really think through, written in my own words. 
+        Searchable so I can actually use this for review.
       </p>
 
       <div className="search-wrap">
@@ -38,7 +39,7 @@ export default function Concepts() {
           </div>
         ))}
         {filtered.length === 0 && (
-          <p className="no-results">No concepts match that search.</p>
+          <p className="no-results">Nothing matches that search.</p>
         )}
       </div>
     </div>

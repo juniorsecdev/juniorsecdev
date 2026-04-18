@@ -199,3 +199,20 @@
   .course-row { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
   .course-row-right { width: 100%; justify-content: space-between; }
 }
+
+.home-divider {
+  width: 100%;
+  height: 1px;
+  background: var(--border);
+  margin: 0;
+}
+
+.home-section-intro {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--gray-300);
+  letter-spacing: 0.02em;
+  margin-bottom: 0.9rem;
+  text-transform: uppercase;
+  font-size: 12px;
+}

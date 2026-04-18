@@ -6,10 +6,10 @@ export default function Cases() {
 
   return (
     <div className="page">
-      <div className="section-label">Real-World Analysis</div>
+      <div className="section-label">Real Events</div>
       <h2>Case Studies</h2>
       <p className="page-desc">
-        Real incidents broken down the way analysts do — what happened, how, and what defenders can learn.
+        Real attacks I have studied in depth. Breaking them down myself is how they actually stick.
       </p>
 
       <div className="cases-list">
@@ -29,7 +29,7 @@ export default function Cases() {
 
             <div className="case-grid">
               <div className="case-block">
-                <h4>Attack Chain</h4>
+                <h4>How it happened</h4>
                 <ol className="attack-chain">
                   {c.attackChain.map((step, i) => (
                     <li key={i}>{step}</li>
@@ -38,13 +38,13 @@ export default function Cases() {
               </div>
 
               <div className="case-block">
-                <h4>Impact</h4>
+                <h4>The damage</h4>
                 <p className="case-impact">{c.impact}</p>
 
-                <h4>Root Cause</h4>
+                <h4>Root cause</h4>
                 <div className="root-cause">{c.rootCause}</div>
 
-                <h4>Defense Lessons</h4>
+                <h4>What defenders should take from this</h4>
                 <ul className="defense-lessons">
                   {c.defenseLessons.map((l, i) => <li key={i}>{l}</li>)}
                 </ul>

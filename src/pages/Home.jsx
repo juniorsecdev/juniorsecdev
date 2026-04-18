@@ -9,46 +9,47 @@ export default function Home() {
 
   return (
     <div className="home">
-      <div className="hero-grid" />
-      <div className="hero-glow" />
-
       <div className="hero-content fade-up">
-        <div className="hero-tag">Cybersecurity Portfolio</div>
-        <h1>Documenting the<br />path into <span>security</span>.</h1>
+        <div className="hero-tag">juniorsecdev</div>
+        <h1>Breaking into<br />cybersecurity,<br /><span>one lesson at a time.</span></h1>
         <p className="hero-sub">
-          A living record of my cybersecurity journey. Every course, lesson, concept, and case study logged as I learn — useful for anyone on the same path.
+          I'm working toward a career in security defense. This site is where I keep my notes — 
+          every concept I learn, every case study I break down, every thing that finally clicked. 
+          If you're on the same path, use whatever helps you.
         </p>
         <div className="hero-stats">
           <div className="stat">
             <span className="stat-val">{courses.length}</span>
-            <span className="stat-label">Courses</span>
+            <span className="stat-label">Course{courses.length !== 1 ? 's' : ''} in progress</span>
           </div>
           <div className="stat">
             <span className="stat-val">{lessons.length}</span>
-            <span className="stat-label">Lessons Logged</span>
+            <span className="stat-label">Lessons logged</span>
           </div>
           <div className="stat">
             <span className="stat-val">{concepts.length}</span>
-            <span className="stat-label">Concepts</span>
+            <span className="stat-label">Concepts defined</span>
           </div>
           <div className="stat">
             <span className="stat-val">{cases.length}</span>
-            <span className="stat-label">Case Studies</span>
+            <span className="stat-label">Case studies</span>
           </div>
         </div>
         <div className="hero-actions">
-          <Link to="/courses" className="btn-primary">Browse Courses</Link>
-          <Link to="/concepts" className="btn-ghost">Concepts Glossary</Link>
+          <Link to="/courses" className="btn-primary">See my courses</Link>
+          <Link to="/concepts" className="btn-ghost">Browse concepts</Link>
         </div>
       </div>
 
+      <div className="home-divider" />
+
       <div className="home-courses">
-        <div className="section-label">Training Path</div>
+        <p className="home-section-intro">What I'm studying right now</p>
         <div className="courses-list">
           {courses.map(c => {
-            const done     = c.subcourses.filter(s => s.status === 'complete').length
-            const total    = c.subcourses.length
-            const pct      = Math.round((done / total) * 100)
+            const done = c.subcourses.filter(s => s.status === 'complete').length
+            const total = c.subcourses.length
+            const pct = Math.round((done / total) * 100)
             const lessonsLogged = c.subcourses.reduce((acc, sc) => acc + sc.lessons.length, 0)
             return (
               <Link key={c.id} to={`/courses/${c.id}`} className="course-row">
@@ -58,7 +59,7 @@ export default function Home() {
                   <div className="course-row-meta">
                     <span>{c.duration}</span>
                     <span>{c.level}</span>
-                    <span>{lessonsLogged} lesson{lessonsLogged !== 1 ? 's' : ''} logged</span>
+                    <span>{lessonsLogged} lesson{lessonsLogged !== 1 ? 's' : ''} in my notes</span>
                   </div>
                 </div>
                 <div className="course-row-right">
@@ -66,7 +67,7 @@ export default function Home() {
                     <div className="progress-bar">
                       <div className="progress-fill" style={{ width: `${pct}%` }} />
                     </div>
-                    <span className="progress-text">{done}/{total} courses</span>
+                    <span className="progress-text">{done}/{total} modules done</span>
                   </div>
                   <span className={`course-status-badge status-${c.status}`}>
                     {c.status === 'in-progress' ? 'In Progress' : c.status}
@@ -75,12 +76,11 @@ export default function Home() {
               </Link>
             )
           })}
-
           <div className="course-row course-row-placeholder">
             <div className="course-row-left">
               <div className="course-row-provider">CompTIA</div>
               <div className="course-row-title">Security+</div>
-              <div className="course-row-meta"><span>Coming next</span></div>
+              <div className="course-row-meta"><span>Up next after this one</span></div>
             </div>
             <div className="course-row-right">
               <span className="course-status-badge status-upcoming">Up Next</span>

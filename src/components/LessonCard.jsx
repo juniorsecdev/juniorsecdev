@@ -23,29 +23,43 @@ export default function LessonCard({ lesson }) {
 
       {open && (
         <div className="lesson-body">
-          {lesson.keyPoints?.length > 0 && (
+
+          {lesson.summary && (
+            <p className="lesson-summary">{lesson.summary}</p>
+          )}
+
+          {lesson.whatIMeantToLearn?.length > 0 && (
             <>
-              <h4>Key Concepts</h4>
-              {lesson.keyPoints.map(kp => (
-                <div key={kp.term} className="key-point">
-                  <strong>{kp.term}</strong> — {kp.def}
+              <h4>What this lesson was about</h4>
+              <ul>
+                {lesson.whatIMeantToLearn.map((item, i) => <li key={i}>{item}</li>)}
+              </ul>
+            </>
+          )}
+
+          {lesson.myNotes?.length > 0 && (
+            <>
+              <h4>My notes</h4>
+              {lesson.myNotes.map((note, i) => (
+                <div key={i} className="my-note">
+                  <strong>{note.term}</strong> — {note.def}
                 </div>
               ))}
             </>
           )}
 
-          {lesson.howItUnfolded?.length > 0 && (
+          {lesson.whatClicked?.length > 0 && (
             <>
-              <h4>How It Unfolded</h4>
+              <h4>What clicked for me</h4>
               <ul>
-                {lesson.howItUnfolded.map((item, i) => <li key={i}>{item}</li>)}
+                {lesson.whatClicked.map((item, i) => <li key={i}>{item}</li>)}
               </ul>
             </>
           )}
 
           {lesson.keyTerms?.length > 0 && (
             <>
-              <h4>Key Terms</h4>
+              <h4>Terms I needed to learn</h4>
               <ul>
                 {lesson.keyTerms.map(kt => (
                   <li key={kt.term}><strong>{kt.term}</strong> — {kt.def}</li>
@@ -54,19 +68,10 @@ export default function LessonCard({ lesson }) {
             </>
           )}
 
-          {lesson.blueTeamTakeaways?.length > 0 && (
+          {lesson.rememberForExam?.length > 0 && (
             <>
-              <h4>Blue Team Takeaways</h4>
-              <ul>
-                {lesson.blueTeamTakeaways.map((item, i) => <li key={i}>{item}</li>)}
-              </ul>
-            </>
-          )}
-
-          {lesson.examTips?.length > 0 && (
-            <>
-              <h4>Exam Tips</h4>
-              {lesson.examTips.map((tip, i) => (
+              <h4>Things I need to remember for the exam</h4>
+              {lesson.rememberForExam.map((tip, i) => (
                 <div key={i} className="exam-tip">{tip}</div>
               ))}
             </>
@@ -74,7 +79,7 @@ export default function LessonCard({ lesson }) {
 
           {lesson.resources?.length > 0 && (
             <>
-              <h4>Resources</h4>
+              <h4>Resources I used</h4>
               <div className="resources-list">
                 {lesson.resources.map(r => (
                   <a key={r.url} className="resource-link" href={r.url} target="_blank" rel="noreferrer">
@@ -84,6 +89,7 @@ export default function LessonCard({ lesson }) {
               </div>
             </>
           )}
+
         </div>
       )}
     </div>
